@@ -78,7 +78,7 @@ label start:
 
     scene bg hallway with fade
 
-    jump story
+    jump intro
 
     return
 
@@ -103,7 +103,7 @@ screen myCharacter():
         focus_mask True
         at character_hover
 
-label story:
+label intro:
     #scene bg bedroom with fade
     scene
 
@@ -126,8 +126,11 @@ label story:
         
         "Ignore classmate.":
             "I'm running late. I dont have time for this!"
+            jump startClass
 
+    return
 
+label startClass:
     scene bg library with fade
     show sam at center
     sam "Good morning Everyone!"
@@ -191,6 +194,7 @@ label story:
     sam "Now, if you scrub the timeline, you’ll see the character pop instantly between these three poses. That’s okay! This is our Block."
     sam "It allows us to review the overall action, timing, and silhouettes immediately, before doing any extra drawing."
     sam "The animation looks jerky because the software is just moving in a straight line between our Keys."
+
     return
 
 label extraDiag:
@@ -204,5 +208,8 @@ label extraDiag:
     player "We are both very late! Do you know what the class is about? I wasn’t able to read into it."
     ari "Yeah, unfortunately HAHA. Oh I think it’s gonna be about Pose-to-pose keyframing for animation. It’s about an animation technique where animators draw key poses."
 
+    jump startClass
+
     return
+
 
