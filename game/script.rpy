@@ -252,7 +252,7 @@ label actIntro:
             show bg slowout
             sam "This is an example of Slow out"
 
-            jump act1
+            jump actIntro
 
         "Yes, I'm ready!":
             show sam at center
