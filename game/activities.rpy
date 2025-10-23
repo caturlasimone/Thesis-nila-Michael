@@ -15,27 +15,25 @@ label actIntro:
         "Shall we begin?"
 
         "No, I need to go over the topics again.":
-            scene bg jump:
-                rotate -90
+            scene white
+            show keypose4:
+                zoom 0.3
                 yalign 0.5
-                xpos -800
-                zoom 1.4
-                linear 10.0 xpos -2000
+                xpos -70
             sam "This is an example of Keyposes."
 
-            scene bg breakdown at scrollBackground2
+            show bdown4:
+                zoom 0.3
+                yalign 0.5
+                xpos -70
             sam "This is an example of Breakdown."
 
             scene white
-            show bg slowin:
-                rotate -90
+            show timing1:
+                zoom 0.25
                 yalign 0.5
                 xalign 0.5
-                zoom 0.55
-            sam "This is an example of Slow in"
-
-            show bg slowout
-            sam "This is an example of Slow out"
+            sam "This is an example of Slow in and Slow out."
 
             jump actIntro
 
@@ -57,14 +55,29 @@ label actIntro:
                 yalign 0.25
                 xalign 0.5
                 zoom 2.0
-            sam "But be careful! there are one Amongus on the choices Like this! In this picture, notice each frame in the picture, the legs and arms doesn’t show fluidity and consistency, which is wrong."
+            sam "But be careful! there are one Amongus on the choices Like this!"
+
+            scene gray
+            show bg sample4:
+                yalign 0.25
+                xalign 0.5
+                zoom 2.0
+            sam "In this picture, notice each frame in the picture, the legs and arms doesn’t show fluidity and consistency, which is wrong."
 
             scene gray
             show bg sample3:
                 yalign 0.25
                 xalign 0.5
                 zoom 2.0
+            sam "This is the correct sequence of the keyframes in the given example."
+
+            scene gray
+            show bg sample5:
+                yalign 0.25
+                xalign 0.5
+                zoom 2.0
             sam "In this picture, notice how the arms and legs smoothly correspond to the movement of the walk. Which is correct."
+
 
             scene bg library
             show sam at center
@@ -91,10 +104,15 @@ label act1:
     scene bg library
     show sam at center
     if ans == "right":
-        sam "Thats right!"
+        sam "Thats right! You can see the fluidity in the movement, plus it projects the right anticipation, timing and space!"
     else:
         sam "Try again."
         jump act1
+
+    scene bg library
+    show sam at center
+
+    sam "I hope you maintain this new perspective about learning the pose-to-pose 2d key framing!"
 
     return
 

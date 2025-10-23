@@ -108,12 +108,13 @@ label startClass:
     show sam at center
     sam "Good morning Everyone!"
     sam "Today, we're diving into one of the fundamental techniques in animation: Pose-to-Pose Keyframing."
-    # may nagflash daw sa screen
+    show bg intro with fade
     show sam at left with move
     show sam at left, flipped
     sam "This is the method most professional animators use to create structured, deliberate movement."
     sam "What is Pose-to-Pose? Can anybody answer?"
 
+    hide intro2
     show playerSprite at right
 
     menu:

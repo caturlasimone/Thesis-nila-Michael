@@ -356,6 +356,7 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
+    add "images/mainmenu.png" xpos 0.5 ypos 0.1 zoom 0.9
 
     ## This empty frame darkens the main menu.
     frame:
@@ -373,7 +374,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text "[config.version]":
+            text "ver [config.version]":
                 style "main_menu_version"
 
 
@@ -390,10 +391,10 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
+    xalign 0.3
     xoffset -30
     xmaximum 1200
-    yalign 1.0
+    yalign 0.1
     yoffset -30
 
 style main_menu_text:
@@ -401,9 +402,11 @@ style main_menu_text:
 
 style main_menu_title:
     properties gui.text_properties("title")
+    
 
 style main_menu_version:
     properties gui.text_properties("version")
+    xalign 0.1
 
 
 ## Game Menu screen ############################################################
