@@ -106,33 +106,69 @@ label sceneSeven:
     show playerSprite at center with move
     "Lina went back to her desk and you began a new drawing: 'A girl was reaching for a book on a high shelf'"
 
-    jump sceneEight
+    "You first draw the starting pose which is a girl looking up at the shelf with her hand at her side."
+    "Mid-Action Pose, The girl’s hand stretched high, her body on her tiptoes, reaching for the book."
+    "and Ending pose, The girls holding the book in her hands,  a triumphant smile on her face."
+    "as you start with the in betweens, you first visualize the proper sequence of the inbetween."
+
+    jump act2
     
     return
 
-label sceneEight:
+label act2:
+    default ans2 = None
+
     "What is the proper sequence of your drawing?"
-    #Last Activity
 
-    "You  drew the key poses first, then filled in the in-betweens, carefully drawing the way her hand moved, the way her body shifted."
-    "When he was done, the girl didn't just exist; she was alive. She had a story. She was reaching, straining, and finally, succeeding."
+    window hide
+    call screen answers2
 
-    "You looked at your own drawing. It wasn't just a picture of a girl with a book."
-    "It was a story of determination and success, told one pose at a time."
-    "From that day on, your drawings never felt stiff again. They were full of life, action, and, most importantly, a story."
+    if ans == "wrong":
+        player "That doesn't look quite right. Why dont I try again?"
+        jump act2
+    else:
+        "You  drew the key poses first, then filled in the in-betweens, carefully drawing the way her hand moved, the way her body shifted."
+        "When he was done, the girl didn't just exist; she was alive. She had a story. She was reaching, straining, and finally, succeeding."
 
-    jump rollCredits
+        "You looked at your own drawing. It wasn't just a picture of a girl with a book."
+        "It was a story of determination and success, told one pose at a time."
+        "From that day on, your drawings never felt stiff again. They were full of life, action, and, most importantly, a story."
+
+        jump rollCredits
+
     
     return
+
+screen answers2():
+    modal True
+    zorder 100
+    default ans = None
+
+    imagebutton:
+        yalign -700
+        xalign 0.2
+        idle Transform("right2.png", matrixcolor=BrightnessMatrix(0.1), zoom=0.2)
+        hover Transform("right2.png", zoom=0.2)
+        action [SetVariable("ans", "right"), Return()]
+        focus_mask True
+        at character_hover
+
+    imagebutton:
+        yalign -700
+        xalign 0.8
+        idle Transform("wrong2.png", matrixcolor=BrightnessMatrix(0.1), zoom=0.2)
+        hover Transform("wrong2.png", zoom=0.2)
+        action [SetVariable("ans", "wrong"), Return()]
+        focus_mask True
+        at character_hover
 
 label rollCredits:
     window hide
 
-    #scene black
     scene expression Solid("#f08daf")
 
     show screen creditscreen with fade
-    pause 100 # or however long it takes to scroll through in a reasonable speed
+    pause 100 
     pause
 
     hide screen creditscreen

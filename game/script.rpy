@@ -77,11 +77,10 @@ label start:
     return
 
 label intro:
-    #scene bg bedroom with fade
-    scene
-
+    '''
+    scene bg bedroom with fade
     show playerSprite at center
-    player "Oh no! I'm late for school!"
+    player "Oh no! I'm late for school!" '''
 
 
     scene bg outside with fade
