@@ -29,7 +29,7 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""(Pose!) - A visual novel game use as instructional material that support drawing skills acquisition in pose-to-pose animation, it is a visual novel with a specific content such as pose to pose, slow in slow out, timing and spacing and setting keyframing.
 """)
 
 

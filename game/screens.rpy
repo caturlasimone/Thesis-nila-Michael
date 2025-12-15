@@ -218,7 +218,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 0.65
+    ypos 0.61
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -357,6 +357,7 @@ screen main_menu():
 
     add gui.main_menu_background
     add "images/mainmenu.png" xpos 0.5 ypos 0.1 zoom 0.9
+    #add "images/titlepage.png" xpos 0.44 ypos -0.1 zoom 0.4
 
     ## This empty frame darkens the main menu.
     frame:
@@ -600,6 +601,58 @@ screen load():
     tag menu
 
     use file_slots(_("Load"))
+
+
+screen creditscreen:
+    vbox:
+        xsize 1000 # horizontal size of the credits
+        ysize 4700 # how much vertical space your rolling credits take.
+        xalign 0.5
+        yalign 0.0
+        at transform:
+            subpixel True
+            easein 55: # or however long it takes to scroll through in a reasonable speed
+                yalign 1.0
+        vbox:
+            ysize 300 # enter vertical resolution, so that it starts with an empty screen
+
+        text "Thank you for your interest and support in playing, 'Pose!'—the visual novel designed to enhance 2D Pose-to-Pose Keyframing Animation drawing skills.":
+            size 42
+            xalign 0.5
+            color "#100c08"
+        text "We have successfully reached the final stage and are excited to share the product based on our research findings. This means turning our concept into a fully functional and engaging tool that we believe will significantly support the drawing skill acquisition of animation animation students.":
+            size 42
+            xalign 0.5
+            color "#100c08"
+        text "We hope that this product will serve as a pinnacle of innovative Pedagogy.":
+            size 42
+            xalign 0.5
+            color "#100c08"
+
+        add "titlepage.png":
+            zoom 0.4
+
+        text "Thank you":
+            bold True
+            size 60
+            xalign 0.5
+            color "#100c08"
+
+        vbox:
+            ysize 50
+
+        text "Researchers:":
+            size 42
+            xalign 0.5
+            color "#100c08"
+        text "Gallego, Mark Eric\nPeñamante, John Micheal\nQueri, Janicia Claire\nReyes, Justine Elvin":
+            size 42
+            xalign 0.5
+            color "#100c08"
+        vbox:
+            ysize 50
+        
+
 
 
 screen file_slots(title):

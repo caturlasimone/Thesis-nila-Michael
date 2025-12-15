@@ -112,7 +112,14 @@ label act1:
     scene bg library
     show sam at center
 
+    sam "Congratulations!!! It seems that you have grasped the idea of our lesson today!"
     sam "I hope you maintain this new perspective about learning the pose-to-pose 2d key framing!"
+    sam "So for your assignment..."
+
+    hide sam with dissolve
+    "Mr. Sam  proceeds to explain the assignment to his students and dismisses the class early."
+
+    jump sceneSix
 
     return
 

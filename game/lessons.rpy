@@ -86,8 +86,8 @@ label breakdown:
 
     show bdown4:
         zoom 0.4
-        yalign 0.5
-        xpos -0.1
+        yalign 0.3
+        xpos -0.15
 
     sam "Once you have your Key Poses and Breakdowns, you have the main structure. The final step is filling in the smaller gaps—the In-betweens—and adjusting the Timing and Spacing."
 
@@ -169,16 +169,15 @@ label outro:
         "Yes, that was super helpful!":
             sam "Great to hear! Now, let’s put that into practice with a quick activity."
             jump actIntro
-        "Could we go over KEY POSES again?":
+        "Could we go back from KEY POSES again?":
             sam "Sure!"
             jump keyposes
-        "Could you explain BREAKDOWN again?":
+        "Could you restart the lesson from BREAKDOWN?":
             sam "Sure!"
             jump breakdown
         "Can we revisit the part about TIMING AND SPACING?":
             sam "Sure!"
             jump timing
-        #"Can you run through SLOW IN & SLOW OUT again?":
-        #    sam "Sure!" 
+
     
     return
