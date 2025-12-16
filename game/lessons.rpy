@@ -1,5 +1,6 @@
 label keyposes:
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
     sam "It is when you make the key moments or poses of a character’s movement."
     sam "Think of it like a choreographer planning a dance: they set the main positions before worrying about the smooth transitions."
@@ -43,7 +44,8 @@ label keyposes:
     sam "It allows us to review the overall action, timing, and silhouettes immediately, before doing any extra drawing."
     sam "The animation looks jerky because the software is just moving in a straight line between our Keys."
 
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
 
     menu:
@@ -91,7 +93,8 @@ label breakdown:
 
     sam "Once you have your Key Poses and Breakdowns, you have the main structure. The final step is filling in the smaller gaps—the In-betweens—and adjusting the Timing and Spacing."
 
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
 
     menu:
@@ -119,7 +122,8 @@ label inbetween:
         xalign 0.5
     sam "This will create the illusion of fluid, continuous motion and is responsible for the subtleties of speed and weight."
 
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
 
     menu:
@@ -157,7 +161,8 @@ label timing:
     jump outro
 
 label outro:
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
 
     sam "By controlling your Key Poses, Breakdowns, and finally your spacing and timing, you get complete control over the illusion of life!"

@@ -39,7 +39,8 @@ transform flipped:
 
 
 label start:
-    scene bg hallway
+    scene bg hallway:
+        zoom 1.5
 
     "Hello there! Welcome to Pose! Where you will be able to refine your skills and knowledge about making animation."
 
@@ -70,20 +71,13 @@ label start:
 
     "Pleased to meet you, [playerName]!"
 
-    scene bg hallway with fade
-
     jump intro
 
     return
 
 label intro:
-    '''
-    scene bg bedroom with fade
-    show playerSprite at center
-    player "Oh no! I'm late for school!" '''
-
-
-    scene bg outside with fade
+    scene bg outside with fade:
+        zoom 1.5
 
     show playerSprite at center
 
@@ -103,11 +97,15 @@ label intro:
     return
 
 label startClass:
-    scene bg library with fade
+    scene bg library with fade:
+        zoom 1.5
+
     show sam at center
     sam "Good morning Everyone!"
     sam "Today, we're diving into one of the fundamental techniques in animation: Pose-to-Pose Keyframing."
-    show bg intro with fade
+    show bg intro:
+        zoom 1.2
+        xalign 0.5
     show sam at left with move
     show sam at left, flipped
     sam "This is the method most professional animators use to create structured, deliberate movement."

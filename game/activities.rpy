@@ -6,7 +6,8 @@ transform scrollBackground2:
     linear 5.0 xpos -1150
 
 label actIntro:
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
 
     sam "Get ready to answer Questions!"
@@ -79,7 +80,8 @@ label actIntro:
             sam "In this picture, notice how the arms and legs smoothly correspond to the movement of the walk. Which is correct."
 
 
-            scene bg library
+            scene bg library:
+                zoom 1.5
             show sam at center
             sam "After we have shown you some of the example of the quiz, I believe in you!"
             jump act1
@@ -101,7 +103,8 @@ label act1:
 
     call screen answers
 
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
     if ans == "right":
         sam "Thats right! You can see the fluidity in the movement, plus it projects the right anticipation, timing and space!"
@@ -109,7 +112,8 @@ label act1:
         sam "Try again."
         jump act1
 
-    scene bg library
+    scene bg library:
+        zoom 1.5
     show sam at center
 
     sam "Congratulations!!! It seems that you have grasped the idea of our lesson today!"

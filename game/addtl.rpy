@@ -1,7 +1,8 @@
 define lina = Character("Lina", color="#311c4b")
 
 label sceneSix:
-    scene bg stairs
+    scene bg stairs:
+        zoom 1.5
 
     "After class, you decided to do your assignment at a nearby cafe..."
 
@@ -53,7 +54,8 @@ label sceneSeven:
 
     "You both continued your way to the cafe."
 
-    scene bg cafe
+    scene bg cafe:
+        zoom 1.5
     "After a couple minutes, as you make progress on your assignment, you show frustration to your own work."
 
     "Lina notices your frustration."
